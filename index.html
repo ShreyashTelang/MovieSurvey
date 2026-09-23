@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Survey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🎬 Movie Survey</h1>
+        <p class="subtitle">Tell us about your favourite movies!</p>
+
+        <form id="movieForm">
+
+            <!-- Name -->
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                >
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+            </div>
+
+            <!-- Genres -->
+            <div class="form-group">
+                <label>Top 5 Favourite Movie Genres</label>
+
+                <div class="movie-input">
+                    <input
+                        type="text"
+                        id="genreInput"
+                        placeholder="e.g. Action"
+                    >
+
+                    <button type="button" id="addGenre">
+                        Add
+                    </button>
+                </div>
+
+                <ul id="genreList"></ul>
+
+                <p class="counter">
+                    Genres: <span id="genreCount">0</span>/5
+                </p>
+            </div>
+
+            <!-- Movies -->
+            <div class="form-group">
+                <label>Top 5 Favourite Movies</label>
+
+                <div class="movie-input">
+                    <input
+                        type="text"
+                        id="movieInput"
+                        placeholder="e.g. Interstellar"
+                    >
+
+                    <button type="button" id="addMovie">
+                        Add
+                    </button>
+                </div>
+
+                <ul id="movieList"></ul>
+
+                <p class="counter">
+                    Movies: <span id="movieCount">0</span>/5
+                </p>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitButton">
+                Submit Survey
+            </button>
+
+        </form>
+
+
+        <!-- Survey Result -->
+
+        <div id="result" class="result hidden">
+
+            <h2>🎥 Your Movie Preferences</h2>
+
+            <div class="user-info">
+                <p>
+                    <strong>Name:</strong>
+                    <span id="resultName"></span>
+                </p>
+
+                <p>
+                    <strong>Email:</strong>
+                    <span id="resultEmail"></span>
+                </p>
+            </div>
+
+            <h3>Favourite Genres</h3>
+            <ol id="resultGenres"></ol>
+
+            <h3>Favourite Movies</h3>
+            <ol id="resultMovies"></ol>
+
+            <button id="updateButton" class="update-btn">
+                ✏️ Update Survey
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
